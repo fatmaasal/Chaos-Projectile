@@ -48,6 +48,9 @@ class SkillUp(Collectible):
             elif "pierce" in tags:
                 attack = self.world.attacks[collider_ID][0]
                 attack.piercing = True
+	    elif "power" in tags:
+                attack = self.world.attacks[collider_ID][0]
+                attack.amount += 15
             #Destroy collectible
             self.remove_item()
 
