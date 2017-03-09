@@ -405,6 +405,8 @@ class GameWorld(object):
                     temp = pygame.image.load(os.path.join('data', 'skill_additional_projectile.png'))
                 elif tag == "pierce":
                     temp = pygame.image.load(os.path.join('data', 'skill_piercing_projectile.png'))
+	        elif tag == "power":
+                    temp = pygame.image.load(os.path.join('data', 'powerUp.png'))
                 skillup_sprite = components.Appearance(temp.convert_alpha(), 32, 32, [9], [74])
                 skillup_sprite.rect.center = collider.center
                 skillup_pot = collectible.SkillUp(self, self.event_manager)
