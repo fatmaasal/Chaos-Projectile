@@ -168,6 +168,11 @@ class UpdatePlayersHpUI(Event):
         self.name = "Update HP UI"
         self.player_ID = player_ID
 
+class UpdateEnemysHpUI(Event):
+    def __init__(self, enemy_ID):
+        self.name = "Update Enemy's HP UI"
+        self.enemy_ID = enemy_ID
+
 class CollectedItem(Event):
     def __init__(self, entity_ID):
         self.name = "Player collected item"

@@ -67,6 +67,8 @@ class CombatSystem():
     def check_projectile_collision(self):
         """Checks for collision between projectiles and other objects."""
         player_ID = self.world.player
+	#Fatma	
+	enemy_ID = self.world.ai
         for attacks_ID in self.world.attacks:
             for attack in self.world.attacks[attacks_ID]:
                 for projectile in attack.particles:
@@ -105,6 +107,9 @@ class CombatSystem():
                                             enemys_health = self.world.hp[collider_ID]
                                             #Decrease HP 
                                             enemys_health.points -= attack.damage
+					    #Fatma
+					    update_enemy_ui_ev = events.UpdateEnemysHpUI(enemy_ID)
+                                            self.event_manager.post(update_enemy_ui_ev)
                                             #Send stun event
                                             stun_ev = events.EntityStunned(collider_ID, attack.stun)
                                             self.event_manager.post(stun_ev)

@@ -36,6 +36,9 @@ class AnimationSystem(object):
                 self.run_animations(event.dt)
             if isinstance(event, events.UpdatePlayersHpUI):
                 self.update_players_hp_ui(event.player_ID)
+	    #Fatma
+	    if isinstance(event, events.UpdateEnemysHpUI):
+                self.update_enemys_hp_ui(event.enemy_ID)
             if hasattr(event, 'entity_ID'):
                 entity_ID = event.entity_ID
                 if isinstance(event, events.UpdateImagePosition):
@@ -152,6 +155,9 @@ class AnimationSystem(object):
             hp_image_index = 0
         players_health.current_image = players_health.hp_sprites[hp_image_index]
         self.world.appearance[self.world.players[player_ID].hp_ID] = players_health.current_image
+    #Fatma
+    def update_enemys_hp_ui(self,enemy_ID):
+	print("")
 
     def idle_animation_running(self, entity_ID):
         current_animation = self.world.appearance[entity_ID].current_animation
