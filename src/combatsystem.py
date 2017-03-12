@@ -26,7 +26,7 @@ class CombatSystem():
         self.event_manager.register_listener(self)
 
         self.world = world
-        
+        self.healthCount = 3 #Aysenur
         self.reset_the_world = False
 
     def notify(self, event):
@@ -136,9 +136,23 @@ class CombatSystem():
     def remove_dead_entities(self):
         for entity_ID in self.world.to_remove:
             self.world.destroy_entity(entity_ID)
+            #Aysenur
             if entity_ID == self.world.player:
-                self.reset_the_world = True
-        self.world.to_remove = list()
+                if self.healthCount ==0:
+                    self.reset_the_world = True
+                    self.healthCount = 3
+                else:
+                  # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
+                    self.healthCount=self.healthCount -1
+                    player_hp =  150
+                    player_max_x_vel = 6
+                    player_max_y_vel = 13
+                    player_attack_list = None
+                    player_position = self.world.collider[self.world.player].center
+                    self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
+                                       player_attack_list)
+                    self.create_curse()
+            self.world.to_remove = list()
 
     def execute_attack(self, entity_ID, attack_Nr, spawn_attack_pos=None, attack_dir=None):
         """Entity executes one of its possible attacks if cooldown is ready.
