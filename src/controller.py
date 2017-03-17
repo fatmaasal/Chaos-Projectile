@@ -141,6 +141,10 @@ class InputController:
                         elif event.type == pygame.MOUSEBUTTONDOWN:
                             attack_request_ev = events.MouseButtonDown()
                             self.event_manager.post(attack_request_ev)
+			elif event.type == pygame.K_r:
+                            attack_request_ev = events.MouseButtonDown()
+                            self.event_manager.post(attack_request_ev)
+		   
                     # Handle hats
                     if self.use_hat_to_aim > -1:
                         if event.type == pygame.JOYHATMOTION:
