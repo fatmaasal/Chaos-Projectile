@@ -33,7 +33,7 @@ class SelectedUI:
     MOVE_WITH_HAT = 9
     AIM_WITH_HAT = 10
     USE_DEFAULT_CONTROLS = 11
-
+    AIM_WITH_R = 12
 class ControlSettingScreen():
     """Contains UI elements.
 
@@ -58,6 +58,7 @@ class ControlSettingScreen():
                          "-", #aim y input
                          "-", #aim -y input
                          "No", #aim with mouse
+			 "No", #aim with r
                          "No", #move with hat
                          "No", #aim with hat
                          "No"] #use default control
@@ -284,6 +285,7 @@ class ControlSettingScreen():
                 self.textList[action] = "Axis: {}, Gamepad: {}".format(control.axis, control.joy)
         if use_mouse_to_aim_and_fire:
             self.textList[SelectedUI.AIM_WITH_MOUSE] = "Yes"
+	    self.textList[SelectedUI.AIM_WITH_R] = "Yes"
         else:
             self.textList[SelectedUI.AIM_WITH_MOUSE] = "No"
         if use_hat_to_aim > -1:
@@ -322,7 +324,9 @@ class ControlSettingScreen():
         self.screen.blit(text, [647, 113])
         text = self.font_small.render(self.textList[SelectedUI.AIM_WITH_HAT], True, RED)
         self.screen.blit(text, [647, 213])
-        text = self.font_small.render(self.textList[SelectedUI.AIM_WITH_MOUSE], True, RED)
+        text = self.font_small.render(self.textList[SelectedUI.AIM_WITH_MOUSE], True, RED)    
+	self.screen.blit(text, [647, 213])
+        text = self.font_small.render(self.textList[SelectedUI.AIM_WITH_R], True, RED)
         self.screen.blit(text, [647, 313])
         text = self.font_small.render(self.textList[SelectedUI.USE_DEFAULT_CONTROLS], True, RED)
         self.screen.blit(text, [647, 413])
