@@ -103,6 +103,12 @@ class MouseButtonDown(Event):
     def __init__(self):
         self.name = "Mouse Button Down Event"
 
+class RButtonDown(Event):
+    
+    def __init__(self):
+        self.name = "R Button Down Event"
+
+
 class ResetWorld(Event):
     """
     :Attributes:
