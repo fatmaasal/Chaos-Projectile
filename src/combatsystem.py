@@ -140,17 +140,16 @@ class CombatSystem():
             self.world.destroy_entity(entity_ID)
             #Aysenur
             if entity_ID == self.world.player:
-
-               self.healthCount = self.healthCount - 1
+                self.healthCount = self.healthCount - 1
                 if self.healthCount ==0:
-									self.world.game_paused=True;
+									self.world.game_paused=True
 									quit_ev = events.QuitEvent()
-									#self.event_manager.post(quit_ev)
+									self.event_manager.post(quit_ev)
 									#self.notify(events.QuitEvent)
 									# This will stop the while loop of run() method from running
 									#self.keep_going = False
                 self.reset_the_world = True
-                print(self.healthCount)
+                #print(self.healthCount)
                 #else:
                   # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
                     #self.healthCount=self.healthCount -1
