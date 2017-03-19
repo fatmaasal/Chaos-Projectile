@@ -58,6 +58,8 @@ class InputSystem(object):
                 self.handle_mouse_move(event.x, event.y)
             elif isinstance(event, events.MouseButtonDown):
                 self.handle_attack_request()
+	    elif isinstance(event, events.RButtonDown):
+                self.handle_attack_request()
             elif isinstance(event, events.SentInputAction):
                 self.handle_input(event)
             elif self.continuous_attack:
