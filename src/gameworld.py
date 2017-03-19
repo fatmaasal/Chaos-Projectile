@@ -144,7 +144,10 @@ class GameWorld(object):
                                     if tile_properties["curse"] == "pink":
                                         tags.append("pink")
                             coll = components.Collider(x*64, y*64, 64, 64, tags)
-                            walls.append(coll)                                
+                            walls.append(coll)
+        #aysenur
+        image=pygame.image.load(os.path.join('data','heart.png'))
+        screen.blit(image,(0,0))
         # Add player afterwards so he is on top of game objects 
         self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
                                player_attack_list)
