@@ -529,6 +529,10 @@ class GameWorld(object):
         :type position: 2d list
         """
         if ai_ID == "green_1":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 50, 96, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -539,14 +543,18 @@ class GameWorld(object):
             anim = components.Appearance(temp, 128, 128, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
-            c = (coll, direction, vel, anim, hp)
+            c = (coll, direction, vel, anim,hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
-            
             enemy_AI = ai.AI_1(self, enemy_ID, self.event_manager)
+            #self.add_component_to_entity(hp_ID,enemy_ID)
             self.add_component_to_entity(enemy_ID, enemy_AI)
             self.add_component_to_entity(enemy_ID, attack_list)
         elif ai_ID == "green_2":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 100, 100, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -557,13 +565,17 @@ class GameWorld(object):
             anim = components.Appearance(temp, 128, 128, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
             c = (coll, direction, vel, anim, hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
             enemy_AI = ai.AI_3(self, enemy_ID, self.event_manager)
             self.add_component_to_entity(enemy_ID, enemy_AI)
             self.add_component_to_entity(enemy_ID, attack_list)
         elif ai_ID == "pink_1":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 50, 96, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -574,14 +586,18 @@ class GameWorld(object):
             anim = components.Appearance(temp, 243, 128, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
             c = (coll, direction, vel, anim, hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
             
             enemy_AI = ai.AI_2(self, enemy_ID, self.event_manager)
             self.add_component_to_entity(enemy_ID, enemy_AI)
             self.add_component_to_entity(enemy_ID, attack_list)
         elif ai_ID == "pink_2":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 70, 70, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -592,14 +608,18 @@ class GameWorld(object):
             anim = components.Appearance(temp, 75, 75, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
             c = (coll, direction, vel, anim, hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
             
             enemy_AI = ai.AI_3(self, enemy_ID, self.event_manager)
             self.add_component_to_entity(enemy_ID, enemy_AI)
             self.add_component_to_entity(enemy_ID, attack_list)
         elif ai_ID == "pink_3":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 50, 96, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -610,14 +630,18 @@ class GameWorld(object):
             anim = components.Appearance(temp, 128, 128, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
             c = (coll, direction, vel, anim, hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
             
             enemy_AI = ai.AI_4(self, enemy_ID, self.event_manager)
             self.add_component_to_entity(enemy_ID, enemy_AI)
             self.add_component_to_entity(enemy_ID, attack_list)
         elif ai_ID == "pink_boss":
+            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            hp = components.Health(max_hp, 5, temp)
+            c_hp = (hp, hp.current_image)
+            hp_ID = self.create_entity(c_hp)
             #Enemy's hitbox, it is 50 pixel width and 96 pixel height
             coll = components.Collider(position[0], position[1], 86, 170, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -628,8 +652,8 @@ class GameWorld(object):
             anim = components.Appearance(temp, 250, 200, anim_list, anim_time_list)
             anim.rect.center = coll.center
             direction = components.Direction([1, 0])
-            hp = components.Health(max_hp)
             c = (coll, direction, vel, anim, hp)
+            self.add_component_to_entity(hp_ID, c)
             enemy_ID = self.create_entity(c)
             enemy_AI = ai.AI_Boss_2(self, enemy_ID, self.event_manager)
             self.add_component_to_entity(enemy_ID, enemy_AI)

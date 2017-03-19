@@ -67,8 +67,6 @@ class CombatSystem():
     def check_projectile_collision(self):
         """Checks for collision between projectiles and other objects."""
         player_ID = self.world.player
-	#Fatma	
-	enemy_ID = self.world.ai
         for attacks_ID in self.world.attacks:
             for attack in self.world.attacks[attacks_ID]:
                 for projectile in attack.particles:
@@ -87,7 +85,7 @@ class CombatSystem():
                                             players_health = self.world.hp[self.world.players[player_ID].hp_ID]
                                             #Decrease HP 
                                             players_health.points -= attack.damage
-                                            update_ui_ev = events.UpdatePlayersHpUI(player_ID)
+                                            update_ui_ev = events.UpdatePlayersHpUI(collider_ID)
                                             self.event_manager.post(update_ui_ev)
                                             #Send stun event
                                             stun_ev = events.EntityStunned(player_ID, attack.stun)
@@ -107,8 +105,7 @@ class CombatSystem():
                                             enemys_health = self.world.hp[collider_ID]
                                             #Decrease HP 
                                             enemys_health.points -= attack.damage
-					    #Fatma
-					    update_enemy_ui_ev = events.UpdateEnemysHpUI(enemy_ID)
+                                            update_enemy_ui_ev = events.UpdateEnemysHpUI(collider_ID)
                                             self.event_manager.post(update_enemy_ui_ev)
                                             #Send stun event
                                             stun_ev = events.EntityStunned(collider_ID, attack.stun)
@@ -143,20 +140,19 @@ class CombatSystem():
             self.world.destroy_entity(entity_ID)
             #Aysenur
             if entity_ID == self.world.player:
-                if self.healthCount ==0:
-                    self.reset_the_world = True
-                    self.healthCount = 3
-                else:
+                #if self.healthCount ==0:
+                self.reset_the_world = True
+                    #self.healthCount = 3
+                #else:
                   # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
-                    self.healthCount=self.healthCount -1
-                    player_hp =  150
-                    player_max_x_vel = 6
-                    player_max_y_vel = 13
-                    player_attack_list = None
-                    player_position = self.world.collider[self.world.player].center
-                    self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
-                                       player_attack_list)
-                    self.create_curse()
+                   # self.healthCount=self.healthCount -1
+                    #player_hp =  150
+                    #player_max_x_vel = 6
+                    #player_max_y_vel = 13
+                    #player_attack_list = None
+                    #player_position = self.world.collider[self.world.player].center
+                    #self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,player_attack_list)
+                    #self.create_curse()
             self.world.to_remove = list()
 
     def execute_attack(self, entity_ID, attack_Nr, spawn_attack_pos=None, attack_dir=None):
