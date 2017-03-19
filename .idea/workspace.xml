@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
+    <list default="true" id="d0bb2a7c-7d6d-458a-baa9-6b8f2f7d387c" name="Default" comment="">
+
     <list default="true" id="5ac5b08b-ad80-4b92-87b7-70aba71ce240" name="Default" comment="">
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/combatsystem.py" afterPath="$PROJECT_DIR$/src/combatsystem.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gameworld.py" afterPath="$PROJECT_DIR$/src/gameworld.py" />
     </list>
@@ -18,36 +22,67 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
+      <file leaf-file-name="gameworld.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gameworld.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-375">
+              <caret line="139" column="13" lean-forward="false" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+
       <file leaf-file-name="animationsystem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/animationsystem.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-4">
               <caret line="141" column="33" lean-forward="false" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="33" />
+
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+
+      <file leaf-file-name="events.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/events.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="10" />
+
       <file leaf-file-name="level.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/level.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+
+      <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+
       <file leaf-file-name="parallaxStarfield.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parallaxStarfield.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+
+      <file leaf-file-name="combatsystem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="142" column="34" lean-forward="false" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+
       <file leaf-file-name="gameworld.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameworld.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,6 +108,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
               <caret line="319" column="26" lean-forward="true" selection-start-line="319" selection-start-column="26" selection-end-line="319" selection-end-column="26" />
+
               <folding />
             </state>
           </provider>
@@ -81,28 +117,49 @@
       <file leaf-file-name="rendersystem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rendersystem.py">
           <provider selected="true" editor-type-id="text-editor">
+
+            <state relative-caret-position="1097">
+              <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+
             <state relative-caret-position="416">
               <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+
+      <file leaf-file-name="controlSettingScreen.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controlSettingScreen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2104">
+              <caret line="227" column="38" lean-forward="false" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="38" />
+
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+
+      <file leaf-file-name="statesystem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/statesystem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1245">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+
       <file leaf-file-name="combatsystem.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1962">
               <caret line="212" column="39" lean-forward="true" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
+
               <folding />
             </state>
           </provider>
@@ -122,6 +179,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+
+      <find>esc</find>
+      <find>quit</find>
+      <find>draw</find>
+      <find>dr</find>
+      <find>proj_image</find>
+
       <find>ai[</find>
       <find>create_enem</find>
       <find>players</find>
@@ -133,6 +197,7 @@
       <find>create_player</find>
       <find>player</find>
       <find>.png</find>
+
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,9 +207,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/combatsystem.py" />
+
+        <option value="$PROJECT_DIR$/src/gameworld.py" />
+
         <option value="$PROJECT_DIR$/src/ai.py" />
         <option value="$PROJECT_DIR$/src/gameworld.py" />
         <option value="$PROJECT_DIR$/src/components.py" />
+
       </list>
     </option>
   </component>
@@ -154,6 +223,11 @@
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
+
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -197,8 +271,13 @@
           </PATH>
         </subPane>
       </pane>
+
+      <pane id="Scratches" />
+      <pane id="Scope" />
+
       <pane id="Scope" />
       <pane id="Scratches" />
+
     </panes>
   </component>
   <component name="RunManager" selected="Python.game">
@@ -367,16 +446,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+
+      <changelist id="d0bb2a7c-7d6d-458a-baa9-6b8f2f7d387c" name="Default" comment="" />
+      <created>1489949162318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1489949162318</updated>
+
       <changelist id="5ac5b08b-ad80-4b92-87b7-70aba71ce240" name="Default" comment="" />
       <created>1489933194444</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489933194444</updated>
+
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.089930825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -389,6 +490,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5329341" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -406,6 +508,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+
+    <entry file="file://$PROJECT_DIR$/src/gameworld.py">
+
     <entry file="file://$PROJECT_DIR$/src/animationsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2085">
@@ -415,6 +520,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chaosparticle.py">
+
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -422,23 +528,41 @@
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="10" />
+
     <entry file="file://$PROJECT_DIR$/src/collectible.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+
     <entry file="file://$PROJECT_DIR$/src/collisionsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="67" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
+
     <entry file="file://$PROJECT_DIR$/src/gameworld.py">
+
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -446,54 +570,110 @@
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/rendersystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+
     <entry file="file://$PROJECT_DIR$/src/components.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4710">
           <caret line="319" column="26" lean-forward="false" selection-start-line="319" selection-start-column="26" selection-end-line="319" selection-end-column="26" />
+
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ai.py">
       <provider selected="true" editor-type-id="text-editor">
+
+        <state relative-caret-position="4575">
+
         <state relative-caret-position="2835">
           <caret line="196" column="57" lean-forward="false" selection-start-line="196" selection-start-column="57" selection-end-line="196" selection-end-column="57" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+
     <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1545">
           <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/controlSettingScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3390">
+          <caret line="227" column="38" lean-forward="false" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="38" />
+
     <entry file="file://$PROJECT_DIR$/src/ai.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="906" column="100" lean-forward="false" selection-start-line="906" selection-start-column="96" selection-end-line="906" selection-end-column="100" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/statesystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+
     <entry file="file://$PROJECT_DIR$/src/chaosparticle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/systemmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+
     <entry file="file://$PROJECT_DIR$/src/collectible.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
+
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/animationsystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/systemmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+
     <entry file="file://$PROJECT_DIR$/src/collisionsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -545,6 +725,7 @@
     <entry file="file://$PROJECT_DIR$/src/soundsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
+
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -552,60 +733,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/statesystem.py">
       <provider selected="true" editor-type-id="text-editor">
+
+        <state relative-caret-position="1245">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+
         <state relative-caret-position="-31">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="119" column="48" lean-forward="true" selection-start-line="119" selection-start-column="48" selection-end-line="119" selection-end-column="48" />
+
     <entry file="file://$PROJECT_DIR$/src/systemmanager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/controlSettingScreen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2104">
+          <caret line="227" column="38" lean-forward="false" selection-start-line="227" selection-start-column="35" selection-end-line="227" selection-end-column="38" />
+
     <entry file="file://$PROJECT_DIR$/src/parallaxStarfield.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="10" />
+
     <entry file="file://$PROJECT_DIR$/src/quadTree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+
     <entry file="file://$PROJECT_DIR$/src/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="142" column="34" lean-forward="false" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+
     <entry file="file://$PROJECT_DIR$/src/animationsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
           <caret line="141" column="33" lean-forward="false" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="33" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/ai.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4504">
+          <caret line="312" column="60" lean-forward="false" selection-start-line="312" selection-start-column="60" selection-end-line="312" selection-end-column="60" />
+
     <entry file="file://$PROJECT_DIR$/src/level.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/parallaxStarfield.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1904">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
     <entry file="file://$PROJECT_DIR$/src/gameworld.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -618,22 +851,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="319" column="26" lean-forward="true" selection-start-line="319" selection-start-column="26" selection-end-line="319" selection-end-column="26" />
+
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rendersystem.py">
       <provider selected="true" editor-type-id="text-editor">
+
+        <state relative-caret-position="1097">
+          <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+
         <state relative-caret-position="416">
           <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
+    <entry file="file://$PROJECT_DIR$/src/gameworld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="139" column="13" lean-forward="false" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+
     <entry file="file://$PROJECT_DIR$/src/combatsystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1962">
           <caret line="212" column="39" lean-forward="true" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
+
           <folding />
         </state>
       </provider>

@@ -140,19 +140,28 @@ class CombatSystem():
             self.world.destroy_entity(entity_ID)
             #Aysenur
             if entity_ID == self.world.player:
-                #if self.healthCount ==0:
+
+               self.healthCount = self.healthCount - 1
+                if self.healthCount ==0:
+									self.world.game_paused=True;
+									quit_ev = events.QuitEvent()
+									#self.event_manager.post(quit_ev)
+									#self.notify(events.QuitEvent)
+									# This will stop the while loop of run() method from running
+									#self.keep_going = False
                 self.reset_the_world = True
-                    #self.healthCount = 3
+                print(self.healthCount)
                 #else:
                   # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
-                   # self.healthCount=self.healthCount -1
-                    #player_hp =  150
-                    #player_max_x_vel = 6
-                    #player_max_y_vel = 13
-                    #player_attack_list = None
+                    #self.healthCount=self.healthCount -1
+                    #self.world.hp[self.world.players[self.world.player].hp_ID].points =self.world.player.hp_ID
+                  #  player_max_y_vel = 13
+                   # player_attack_list = None
                     #player_position = self.world.collider[self.world.player].center
-                    #self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,player_attack_list)
-                    #self.create_curse()
+                    #self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
+                     #                  player_attack_list)
+                  
+
             self.world.to_remove = list()
 
     def execute_attack(self, entity_ID, attack_Nr, spawn_attack_pos=None, attack_dir=None):
