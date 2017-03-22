@@ -311,14 +311,14 @@ class Player():
         - *orb_ID* (int): reference to the orb entity, that belongs this player
     """
 
-    def __init__(self, orb_ID, hp_ID):
+    def __init__(self, orb_ID, hp_ID,health_ID):
         """
         :param orb_ID: reference to the orb entity, that belongs this player
         :type orb_ID: int
         """
         self.orb_ID = orb_ID
         self.hp_ID = hp_ID
-
+        self.health_ID = health_ID
 class Direction(list):
     """Direction of an entity is a simple list with two components that shows its aim/view direction."""
     pass
