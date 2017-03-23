@@ -145,12 +145,13 @@ class GameWorld(object):
                                         tags.append("pink")
                             coll = components.Collider(x*64, y*64, 64, 64, tags)
                             walls.append(coll)
-        #aysenur
-        image=pygame.image.load(os.path.join('data','heart.png'))
-        screen.blit(image,(0,0))
+
         # Add player afterwards so he is on top of game objects 
         self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
                                player_attack_list)
+
+        pygame.display.flip()
+
         self.create_curse()
         #---
         #Quad Tree
@@ -406,7 +407,7 @@ class GameWorld(object):
                 collider = components.Collider(x*64, y*64, 64, 64, tags)
                 if tag == "add_projectile":
                     temp = pygame.image.load(os.path.join('data', 'skill_additional_projectile.png'))
-                
+
 	        elif tag == "power":
                     temp = pygame.image.load(os.path.join('data', 'powerUp.png'))
 		elif tag == "pierce":
@@ -433,6 +434,7 @@ class GameWorld(object):
                 portal = collectible.Portal(self, self.event_manager, x_pos, y_pos)
                 colle_ID = self.create_entity((portal_sprite, portal, collider))
                 portal.entity_ID = colle_ID
+
 
     def create_attack(self, position, damage, stun, cooldown, proj_amount,
                       projectile_image, proj_anim_list, proj_anim_time_list,
@@ -501,6 +503,11 @@ class GameWorld(object):
         hp = components.Health(max_hp, 8, temp)
         c_hp = (hp, hp.current_image)
         hp_ID = self.create_entity(c_hp)
+        #Aysenur
+        temp = pygame.image.load(os.path.join('data', 'heartsprite.png')).convert_alpha()
+        heart = components.Health(max_hp, 8, temp)
+        h_hp = (heart, heart.current_image)
+        health_ID = self.create_entity(h_hp)
         #Players hitbox, it is 50 pixel width and 96 pixel height
         coll = components.Collider(position[0], position[1], 50, 96)
         vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -511,7 +518,7 @@ class GameWorld(object):
         anim = components.Appearance(temp, 128, 128, anim_list, anim_time_list)
         anim.rect.center = coll.center
         direction = components.Direction([1, 0])
-        player = components.Player(0, hp_ID, )
+        player = components.Player(0, hp_ID,health_ID )
         c = (direction, coll, vel, anim, player)
         self.player = self.create_entity(c)
         #Now create the players orb

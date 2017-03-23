@@ -24,6 +24,7 @@ class Level(object):
         # Create new data source for pyScroll
         self.map_data = pyscroll.data.TiledMapData(self.tmx_data)
 
+
     def get_map(self, filename):
         """ Simple helper function to merge the file name and the directory name.
         
