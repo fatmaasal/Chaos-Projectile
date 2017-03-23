@@ -13,6 +13,7 @@ import controlSettingScreen
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
 
+buttonCount=0;
 def equal_input_source(input1, input2):
     #Keyboard key:
     #KEYDOWN == KEYUP, same key_index --> same key toggled
@@ -142,9 +143,10 @@ class InputController:
                             attack_request_ev = events.MouseButtonDown()
                             self.event_manager.post(attack_request_ev)
 			elif event.type == pygame.K_r:
-                            attack_request_ev = events.RButtonDown()
-                            self.event_manager.post(attack_request_ev)
-		   
+                            if buttonCount<10:
+			        attack_request_ev = events.RButtonDown()
+                                self.event_manager.post(attack_request_ev)
+		   	        buttonCount=buttonCount+1;
                     # Handle hats
                     if self.use_hat_to_aim > -1:
                         if event.type == pygame.JOYHATMOTION:
