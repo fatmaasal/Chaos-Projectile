@@ -319,6 +319,22 @@ class Player():
         self.orb_ID = orb_ID
         self.hp_ID = hp_ID
         self.health_ID = health_ID
+
+
+class Enemy():
+    """Marks an entity as a player character.
+
+    :Attributes:
+        - *name* (string): name of the character
+        - *orb_ID* (int): reference to the orb entity, that belongs this player
+    """
+
+    def __init__(self,hp_ID):
+        """
+        :param orb_ID: reference to the orb entity, that belongs this player
+        :type orb_ID: int
+        """
+        self.hp_ID = hp_ID
 class Direction(list):
     """Direction of an entity is a simple list with two components that shows its aim/view direction."""
     pass

@@ -36,9 +36,9 @@ class AnimationSystem(object):
                 self.run_animations(event.dt)
             if isinstance(event, events.UpdatePlayersHpUI):
                 self.update_players_hp_ui(event.player_ID)
-	    #Fatma
-	    if isinstance(event, events.UpdateEnemysHpUI):
-                self.update_enemys_hp_ui(event.enemy_ID)
+            #Fatma
+	        if isinstance(event, events.UpdateEnemysHpUI):
+                    self.update_enemys_hp_ui(event.enemy_ID)
             if hasattr(event, 'entity_ID'):
                 entity_ID = event.entity_ID
                 if isinstance(event, events.UpdateImagePosition):
@@ -135,6 +135,7 @@ class AnimationSystem(object):
         """
         if entity_ID in self.world.appearance:
             self.world.appearance[entity_ID].rect.center = new_position
+
         #When moving object was a player
         if self.world.player == entity_ID:
             #Update orb direction correspondent aim direction and
@@ -151,6 +152,13 @@ class AnimationSystem(object):
             # aysenur
             health_ID = self.world.players[entity_ID].health_ID
             self.world.appearance[health_ID].rect.center = self.world.appearance[orb_ID].rect.center
+        if entity_ID in self.world.ai:
+            hp_ID = self.world.enemys[entity_ID].hp_ID
+            directionX = self.world.direction[entity_ID][0]
+            directionY = self.world.direction[entity_ID][1]
+            self.world.appearance[hp_ID].rect.center = (directionX*32,
+                                                        directionY*32)
+
 
     def update_players_hp_ui(self, player_ID):
         players_health = self.world.hp[self.world.players[player_ID].hp_ID]
@@ -169,7 +177,12 @@ class AnimationSystem(object):
         self.world.appearance[self.world.players[player_ID].health_ID] = players_health.current_image
     #Fatma
     def update_enemys_hp_ui(self,enemy_ID):
-	print("")
+        enemys_health = self.world.hp[self.world.enemys[enemy_ID].hp_ID]
+        hp_image_index = enemys_health.points // (enemys_health.max // (len(enemys_health.hp_sprites) - 1))
+        if (hp_image_index < 0):
+            hp_image_index = 0
+        enemys_health.current_image = enemys_health.hp_sprites[hp_image_index]
+        self.world.appearance[self.world.enemys[enemy_ID].hp_ID] = enemys_health.current_image
 
     def idle_animation_running(self, entity_ID):
         current_animation = self.world.appearance[entity_ID].current_animation
