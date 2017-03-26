@@ -92,8 +92,14 @@ class CombatSystem():
                                             self.event_manager.post(stun_ev)
                                         else:
                                             #No more Hp left. Player dies!
-                                            ev_die = events.EntityDies(collider_ID)
-                                            self.event_manager.post(ev_die)
+                                            self.healthCount = self.healthCount - 1
+                                            players_health = self.world.hp[self.world.players[collider_ID].hp_ID]
+                                            players_health.points = players_health.max
+                                            update_ui_ev = events.UpdatePlayersHpUI(collider_ID)
+                                            self.event_manager.post(update_ui_ev)
+                                            if self.healthCount == 0:
+                                                ev_die = events.EntityDies(collider_ID)
+                                                self.event_manager.post(ev_die)
                                         '''
                                         projectile.life = -1
                                         ev_die = events.EntityDies(projectile.entity_ID)
@@ -141,16 +147,13 @@ class CombatSystem():
             self.world.destroy_entity(entity_ID)
             #Aysenur
             if entity_ID == self.world.player:
-                self.healthCount = self.healthCount - 1
+                #self.healthCount = self.healthCount - 1
                 if self.healthCount ==0:
 									self.world.game_paused=True
 									quit_ev = events.QuitEvent()
 									self.event_manager.post(quit_ev)
-									#self.notify(events.QuitEvent)
-									# This will stop the while loop of run() method from running
-									#self.keep_going = False
-                self.reset_the_world = True
-                #print(self.healthCount)
+                else:
+                    self.world.reset_the_world()
                 #else:
                   # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
                     #self.healthCount=self.healthCount -1

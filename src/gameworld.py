@@ -8,7 +8,7 @@ import os
 import pygame
 import level
 import components
-import chaosparticle
+
 import ai
 import collectible
 
@@ -505,7 +505,7 @@ class GameWorld(object):
         hp_ID = self.create_entity(c_hp)
         #Aysenur
         temp = pygame.image.load(os.path.join('data', 'heartsprite.png')).convert_alpha()
-        heart = components.Health(max_hp, 8, temp)
+        heart = components.Life(max_hp,0, temp)
         h_hp = (heart, heart.current_image)
         health_ID = self.create_entity(h_hp)
         #Players hitbox, it is 50 pixel width and 96 pixel height
@@ -832,7 +832,7 @@ class GameWorld(object):
                                                                   spread1, effect_ID)
                             particle_emitter.piercing = att1_pierce
                             player_attack_list.append(particle_emitter)
-        # Add player afterwards so he is on top of game objects 
+        # Add player afterwards so he is on top of game objects
         self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
                                player_attack_list)
         self.create_curse()
