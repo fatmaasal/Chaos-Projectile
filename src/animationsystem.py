@@ -36,15 +36,16 @@ class AnimationSystem(object):
                 self.run_animations(event.dt)
             if isinstance(event, events.UpdatePlayersHpUI):
                 self.update_players_hp_ui(event.player_ID)
-            #Fatma
-	        if isinstance(event, events.UpdateEnemysHpUI):
-                    self.update_enemys_hp_ui(event.enemy_ID)
             if hasattr(event, 'entity_ID'):
                 entity_ID = event.entity_ID
                 if isinstance(event, events.UpdateImagePosition):
                     self.update_image_position(entity_ID, event.new_position)
+
                 if entity_ID in self.world.appearance:
                     if not self.world.appearance[entity_ID].play_animation_till_end and not self.stun_animation_running(entity_ID):
+                        # Fatma
+                        if isinstance(event, events.UpdateEnemysHpUI):
+                            self.update_enemys_hp_ui(entity_ID)
                         if isinstance(event, events.EntityAttacks):
                             self.play_attack_animation(entity_ID, event.attack_Nr)
                         elif isinstance(event, events.EntityJump):
@@ -156,8 +157,8 @@ class AnimationSystem(object):
             hp_ID = self.world.enemys[entity_ID].hp_ID
             directionX = self.world.direction[entity_ID][0]
             directionY = self.world.direction[entity_ID][1]
-            self.world.appearance[hp_ID].rect.center = (directionX*32,
-                                                        directionY*32)
+            self.world.appearance[hp_ID].rect.center = (directionX*64+ self.world.collider[entity_ID].center[0],
+                                                        directionY*64+ self.world.collider[entity_ID].center[1])
 
 
     def update_players_hp_ui(self, player_ID):
@@ -178,9 +179,9 @@ class AnimationSystem(object):
     #Fatma
     def update_enemys_hp_ui(self,enemy_ID):
         enemys_health = self.world.hp[self.world.enemys[enemy_ID].hp_ID]
-        hp_image_index = enemys_health.points // (enemys_health.max // (len(enemys_health.hp_sprites) - 1))
-        if (hp_image_index < 0):
-            hp_image_index = 0
+        print(enemys_health.max)
+        if(enemys_health.points<enemys_health.max):
+            hp_image_index=3
         enemys_health.current_image = enemys_health.hp_sprites[hp_image_index]
         self.world.appearance[self.world.enemys[enemy_ID].hp_ID] = enemys_health.current_image
 

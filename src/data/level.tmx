@@ -46,7 +46,7 @@
     <property name="att_1_projectile_speed" value="7"/>
     <property name="att_1_spread_angle" value="10"/>
     <property name="att_1_stun" value="10"/>
-    <property name="max_hp" value="20"/>
+    <property name="max_hp" value="30"/>
     <property name="max_x_vel" value="5"/>
     <property name="max_y_vel" value="9"/>
     <property name="type" value="enemy"/>

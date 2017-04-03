@@ -592,7 +592,7 @@ class GameWorld(object):
             coll = components.Collider(position[0], position[1], 50, 96, tags)
             vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
             #Create enemy's animations
-            temp = pygame.image.load(os.path.join('data', 'enemy_pink_1.png')).convert_alpha()
+            temp = pygame.image.load(os.path.join('data', 'hp.png')).convert_alpha()
             anim_list = [4, 8, 6, 8, 2, 4]
             anim_time_list = [240, 60, 44, 58, 10, 44]
             anim = components.Appearance(temp, 243, 128, anim_list, anim_time_list)
@@ -606,7 +606,7 @@ class GameWorld(object):
             self.add_component_to_entity(self.enemy_ID, enemy_AI)
             self.add_component_to_entity(self.enemy_ID, attack_list)
         elif ai_ID == "pink_2":
-            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            temp = pygame.image.load(os.path.join('data', 'hp.png')).convert_alpha()
             hp = components.Health(max_hp, 5, temp)
             c_hp = (hp, hp.current_image)
             hp_ID = self.create_entity(c_hp)
@@ -628,7 +628,7 @@ class GameWorld(object):
             self.add_component_to_entity(self.enemy_ID, enemy_AI)
             self.add_component_to_entity(self.enemy_ID, attack_list)
         elif ai_ID == "pink_3":
-            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            temp = pygame.image.load(os.path.join('data', 'hp.png')).convert_alpha()
             hp = components.Health(max_hp, 5, temp)
             c_hp = (hp, hp.current_image)
             hp_ID = self.create_entity(c_hp)
@@ -650,7 +650,7 @@ class GameWorld(object):
             self.add_component_to_entity(self.enemy_ID, enemy_AI)
             self.add_component_to_entity(self.enemy_ID, attack_list)
         elif ai_ID == "pink_boss":
-            temp = pygame.image.load(os.path.join('data', 'Gradient_Health_Bar.png')).convert_alpha()
+            temp = pygame.image.load(os.path.join('data', 'hp.png')).convert_alpha()
             hp = components.Health(max_hp, 5, temp)
             c_hp = (hp, hp.current_image)
             hp_ID = self.create_entity(c_hp)

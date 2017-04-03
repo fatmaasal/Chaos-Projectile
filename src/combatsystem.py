@@ -110,7 +110,6 @@ class CombatSystem():
                                         if self.world.hp[self.world.enemys[collider_ID].hp_ID].points > 0:
                                             enemys_health = self.world.hp[self.world.enemys[collider_ID].hp_ID]
                                             #Decrease HP
-                                            print(attack.damage)
                                             enemys_health.points -= attack.damage
                                             update_enemy_ui_ev = events.UpdateEnemysHpUI(collider_ID)
                                             self.event_manager.post(update_enemy_ui_ev)
