@@ -3,8 +3,10 @@
     :platform: Unix, Windows
     :synopsis: Handles collision between characters and projectiles, handles attacks etc.
 """
-
+import os
+import time
 import events
+import pygame
 
 
 class CombatSystem():
@@ -92,14 +94,54 @@ class CombatSystem():
                                             self.event_manager.post(stun_ev)
                                         else:
                                             #No more Hp left. Player dies!
+                                            #aysenur
+                                            BLACK = (0, 0, 0)
+                                            WHITE = (255, 255, 255)
+                                            RED = (250, 0, 0)
+                                            YELLOW = (250, 140, 0)
+                                            BasicFont = pygame.font.Font("data/FreeSans.ttf", 100)
+                                            BasicFont2 = pygame.font.Font("data/FreeSans.ttf", 30)
                                             self.healthCount = self.healthCount - 1
                                             players_health = self.world.hp[self.world.players[collider_ID].hp_ID]
-                                            players_health.points = players_health.max
-                                            update_ui_ev = events.UpdatePlayersHpUI(collider_ID)
-                                            self.event_manager.post(update_ui_ev)
+                                            if self.healthCount!=0:
+                                                self.world.game_paused = True
+                                                self.world.screen.fill(BLACK)
+                                                text3 = BasicFont2.render("One life has gone!", True, WHITE)
+                                                text4 =BasicFont2.render(str(self.healthCount), 1,RED)
+                                                text5 = BasicFont2.render("more left!", True,RED)
+                                                self.world.screen.blit(text3, (300, 300))
+                                                self.world.screen.blit(text4,(350,350))
+                                                self.world.screen.blit(text5, (400,350))
+                                                pygame.display.flip()
+                                                pygame.display.update()
+                                                time.sleep(10)
+                                                self.world.game_paused=False
+                                                players_health.points = players_health.max
+                                                update_ui_ev = events.UpdatePlayersHpUI(collider_ID)
+                                                self.event_manager.post(update_ui_ev)
                                             if self.healthCount == 0:
-                                                ev_die = events.EntityDies(collider_ID)
-                                                self.event_manager.post(ev_die)
+                                                self.healthCount=3
+                                                self.world.game_paused = True
+                                                self.world.screen.fill(BLACK)
+                                                text = BasicFont.render("GAME OVER!", True, WHITE)
+                                                self.world.screen.blit(text,(150,100))
+                                                pygame.display.flip()
+                                                image = pygame.image.load(os.path.join('data', 'restart.png')).convert_alpha()
+                                                rect = image.get_rect()
+                                                rect.x, rect.y = (200, 250)
+                                                self.world.screen.blit(image, rect)
+                                                text1 = BasicFont2.render("Press R to RESTART", True,YELLOW)
+                                                self.world.screen.blit(text1, (100,450))
+                                                pygame.display.flip()
+                                                image = pygame.image.load(os.path.join('data', 'exit.png')).convert_alpha()
+                                                rect = image.get_rect()
+                                                rect.x, rect.y = (500, 250)
+                                                self.world.screen.blit(image, rect)
+                                                text2 = BasicFont2.render("Press Q to QUIT", True,RED)
+                                                self.world.screen.blit(text2, (500,450))
+                                                pygame.display.flip()
+                                                pygame.display.update()
+
                                         '''
                                         projectile.life = -1
                                         ev_die = events.EntityDies(projectile.entity_ID)
@@ -147,22 +189,12 @@ class CombatSystem():
             self.world.destroy_entity(entity_ID)
             #Aysenur
             if entity_ID == self.world.player:
-                #self.healthCount = self.healthCount - 1
                 if self.healthCount ==0:
 									self.world.game_paused=True
 									quit_ev = events.QuitEvent()
 									self.event_manager.post(quit_ev)
                 else:
                     self.world.reset_the_world()
-                #else:
-                  # tile_properties = self.level.tmx_data.get_tile_properties(x, y, layer_index)
-                    #self.healthCount=self.healthCount -1
-                    #self.world.hp[self.world.players[self.world.player].hp_ID].points =self.world.player.hp_ID
-                  #  player_max_y_vel = 13
-                   # player_attack_list = None
-                    #player_position = self.world.collider[self.world.player].center
-                    #self.create_player(player_position, player_hp, player_max_x_vel, player_max_y_vel,
-                     #                  player_attack_list)
                   
 
             self.world.to_remove = list()
