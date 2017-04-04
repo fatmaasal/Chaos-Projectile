@@ -8,7 +8,6 @@ import os
 import pygame
 import level
 import components
-
 import ai
 import collectible
 
@@ -60,7 +59,7 @@ class GameWorld(object):
         self.tags = {}
         self.hp = {}
         self.collectibles = {}
-        
+
         self.inactive_entities = list()
         self.to_remove = list()
         
@@ -503,11 +502,13 @@ class GameWorld(object):
         hp = components.Health(max_hp, 8, temp)
         c_hp = (hp, hp.current_image)
         hp_ID = self.create_entity(c_hp)
+
         #Aysenur
         temp = pygame.image.load(os.path.join('data', 'heartsprite.png')).convert_alpha()
-        heart = components.Life(max_hp,0, temp)
+        heart = components.Life(3,0, temp)
         h_hp = (heart, heart.current_image)
         health_ID = self.create_entity(h_hp)
+
         #Players hitbox, it is 50 pixel width and 96 pixel height
         coll = components.Collider(position[0], position[1], 50, 96)
         vel = components.Velocity(0, 0, max_x_vel, max_y_vel)
@@ -767,6 +768,7 @@ class GameWorld(object):
 
     def reset_the_world(self):
         self.inactive_enemy_count = 0
+
         for entity_ID in range(len(self.mask)):
             #No point to reset indestructible walls.
             #Walls are in qudtree
@@ -783,6 +785,7 @@ class GameWorld(object):
         player_max_x_vel = None
         player_max_y_vel = None
         player_attack_list = None
+
         for y in range(layer_width):
             for x in range(layer_height):
                 #####

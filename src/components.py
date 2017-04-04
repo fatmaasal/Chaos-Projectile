@@ -5,7 +5,6 @@
 """
 
 #from enum import Enum
-import pygame
 import chaosparticle
 
 import os
@@ -142,27 +141,25 @@ class Velocity():
         self.max_y = max_y
         #aysenur
 class Life():
-    def __init__(self, hp, segments=None, hp_sprite_sheet=None):
-        self.max = hp
-        self.points = hp
-        self.hp_sprites = list()
-        width =20
-        height =20
+    def __init__(self, h, segments=None, h_sprite_sheet=None):
+        self.max = h
+        self.points = h
+        self.h_sprites = list()
+        width =250
+        height =250
         #Store needed images
         if not segments:
             segments = 1
-        if hp_sprite_sheet:
+        if h_sprite_sheet:
             for counter in range(segments):
                 #Create a new blank image for the sprite
                 image = pygame.Surface([width, height], pygame.SRCALPHA)
-                #Copy the sprite from the sprite sheet
-                image.blit(hp_sprite_sheet, (0, 0), (counter*width, 0,
+                image.blit(h_sprite_sheet, (0, 0), (counter*width, 0,
                                                      width, height))
                 image.convert_alpha()
-                self.hp_sprites.append(Appearance(image))
-                #Assuming black works as the transparent color
-                #image.set_colorkey((0,0,0))
-            self.current_image = self.hp_sprites[segments-1]
+                self.h_sprites.append(Appearance(image))
+            self.current_image = self.h_sprites[segments-1]
+
 
 class Health():
     def __init__(self, hp, segments=None, hp_sprite_sheet=None):
